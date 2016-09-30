@@ -6,7 +6,6 @@ A docker-compose to setup following tools in a few minutes.
 * Confluence
 * GitBucket
 * Jenkins
-* Jenkins slave for Docker operation
 * Mattermost
 * Reverse Proxy
 * PostgreSQL
@@ -15,27 +14,11 @@ A docker-compose to setup following tools in a few minutes.
 
 ## How to Use
 
-### Setup the instance
-
-Install Docker and Docker Compose into the instance by `init.sh`.
-
-### Run containers
-
-Put environment specific settings into `docker-compose.override.yml`:
-
-```yaml
-services:
-  jira:
-    environment:
-      X_PROXY_NAME: ec2-x-x-x-x.x.compute.amazonaws.com
-  confluence:
-    environment:
-      X_PROXY_NAME: ec2-x-x-x-x.x.compute.amazonaws.com
-```
-
-Run containers:
+Install Docker Compose and run containers:
 
 ```sh
+./install-docker-compose.sh
+docker-compose build
 docker-compose up -d
 ```
 
@@ -97,7 +80,7 @@ We provide the init script for LSB.
 Register as follows:
 
 ```sh
-sudo ln -s /opt/devops-compose/init.sh /etc/init.d/devops-compose
+sudo ln -s /opt/devops-compose/init-lsb.sh /etc/init.d/devops-compose
 sudo chkconfig --add devops-compose
 ```
 
@@ -110,4 +93,3 @@ sudo chkconfig --add devops-compose
 
 This is an open source software licensed under Apache-2.0.
 Feel free to open issues or pull requests.
-
