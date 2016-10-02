@@ -38,8 +38,8 @@ Open JIRA and configure the database connection.
 Configure LDAP authentication and create a user.
 
 - LDAP server: `ldap`
-- Admin DN: `cn=admin,dc=example,dc=org` with `admin`
-- Base DN: `dc=example,dc=org`
+- Admin DN: `cn=admin,dc=example,dc=com` with `admin`
+- Base DN: `dc=example,dc=com`
 - User attribute: `cn`
 - Name attribute: `displayName`
 - Mail attribute: `mail`
