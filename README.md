@@ -54,6 +54,8 @@ Open Confluence and configure the database connection.
 - User: `confluence`
 - Password: `confluence`
 
+Configure an application link to JIRA.
+
 ### Setup Jenkins
 
 Get the initial admin password by following command:
@@ -64,10 +66,24 @@ docker exec devopscompose_jenkins_1 cat /var/jenkins_home/secrets/initialAdminPa
 
 Open Jenkins and configure LDAP authentication.
 
+- LDAP server: `ldap`
+- Admin DN: `cn=admin,dc=example,dc=com` with `admin`
+- Root DN: `dc=example,dc=com`
+- Base DN: (empty)
+- User attribute: `cn={0}`
+- Name attribute: `displayname` (default)
+- Mail attribute: `mail` (default)
+
 ### Setup GitBucket
 
 Open GitBucket and configure LDAP authentication.
-Database connection is automatically configured.
+
+- LDAP server: `ldap`
+- Admin DN: `cn=admin,dc=example,dc=com` with `admin`
+- Base DN: `dc=example,dc=com`
+- User attribute: `cn`
+- Name attribute: `displayname`
+- Mail attribute: `mail`
 
 ### Setup Mattermost
 
