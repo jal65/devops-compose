@@ -1,4 +1,4 @@
-# devops-compose
+# devops-compose [![CircleCI](https://circleci.com/gh/int128/devops-compose.svg?style=shield)](https://circleci.com/gh/int128/devops-compose)
 
 A docker-compose to setup following tools in a few minutes.
 
