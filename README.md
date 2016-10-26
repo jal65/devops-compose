@@ -100,9 +100,9 @@ sudo ln -s /opt/devops-compose/init-lsb.sh /etc/init.d/devops-compose
 sudo chkconfig --add devops-compose
 ```
 
-## TODO
+## Backup and Restore (WIP)
 
-* Backup script
+Run `volumes-backup.sh` to backup volumes.
 
 
 ## Contribution
