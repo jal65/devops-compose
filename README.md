@@ -106,10 +106,9 @@ sudo ln -s /opt/devops-compose/init-lsb.sh /etc/init.d/devops-compose
 sudo chkconfig --add devops-compose
 ```
 
-## Backup and Restore (WIP)
+## Backup and Restore
 
-Run `volumes-backup.sh` to backup volumes.
-
+It may be best to backup and restore volumes under `/var/lib/docker/volumes`.
 
 ## Contribution
 
